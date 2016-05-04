@@ -1,0 +1,50 @@
+body{
+	/*大部分文本颜色*/
+	color:#333;
+}
+/*设置链接颜色*/
+a{
+	color:#333;
+}
+/*导航模块*/
+/*链接*/
+.nav li a{
+	color:#888;
+}
+/*利用伪元素选择器设置背景图片*/
+.nav li a::before{
+	content: '';
+	display: block;
+	width: 40px;
+	height: 35px;
+	background:url(nav.png) no-repeat;
+}
+/*hover状态*/
+.nav li a:hover{
+	color:#888;
+}
+/*选中状态*/
+.nav li.selected a,.nav li.selected a:hover{
+	color: #d35757;
+}
+/*右边小标题*/
+.title li a{
+	color: #666;
+}
+/*选中*/
+.title li.selected a{
+	color: #c20c0c;
+}
+/* 优秀新电台 */
+.newlist p{
+	color:#999;
+}
+/*最热电台*/
+/*作者链接*/
+.hotlist .author a{
+	color: #666;
+}
+/*info*/
+.hotlist .info{
+	color: #999;
+}
