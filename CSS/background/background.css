@@ -19,6 +19,16 @@ a{
 	height: 35px;
 	background:url(nav.png) no-repeat;
 }
+/*背景图标定位*/
+.nav li.mxzb a::before{
+	background-position: 0 0;
+}
+.nav li.mxzb.selected a::before{
+	background-position: -40px 0;
+}
+.nav li.yygs a::before{
+	background-position: 0 -35px;
+}
 /*hover状态*/
 .nav li a:hover{
 	color:#888;
