@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS homework1</title>
+</head>
+<style type="text/css">
+	body{
+		font:50px/4 "microsoft yahei";
+        color: #fff;
+	}
+	.parent{
+		margin: 0 auto;
+		text-align: center;
+		width: 810px;
+	}
+	.parent::after{
+		content: '';
+		clear: both;
+		display: block;
+		overflow: hidden;
+		visibility: hidden;
+		height: 0;
+	}
+	.side{
+		background-color: red;
+		margin-right: 10px;
+		float: left;
+		width: 200px;
+	}
+	.main{
+		background-color: blue;
+		float:right;
+		width: 600px;
+	}
+</style>
+<body>
+	<div class="parent"> 
+    <div class="side">侧栏</div>
+    <div class="main">主栏</div>
+</div>
+</body>
+</html>
