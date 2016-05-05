@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>实现一个Tab</title>
+  <style type="text/css">
+    body{
+      font: 14px "Microsoft Yahei";
+    }
+    .container{
+      box-sizing:border-box;
+      width: 574px;
+      height: 200px;
+      background-color: #fff;
+      border: 1px solid #999;
+    }
+    .nav ul{
+      display: flex;
+      padding: 0px;
+      margin: 0px;
+    }
+    .nav li{
+      list-style: none;
+      flex:1;
+      text-align: center;
+      border-bottom: 1px #cecece solid;
+      line-height: 3;
+      background-color: #f1f1f1;
+    }
+    li a{
+      text-decoration: none;
+      color: #000;
+    }
+    .nav li.selected{
+      background-color: #fff;
+      border-bottom-style: none;
+    }
+    li.xxjh,li.kc{
+      border-right: 1px #cecece solid;
+    }
+    .one,.two,.three{
+      padding: 20px;
+    }
+    .two,.three{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <ul>
+        <li class="kc selected"><a href="#">课程</a></li>
+        <li class="xxjh"><a href="#">学习计划</a></li>
+        <li class="jntp"><a href="#">技能图谱</a></li>
+      </ul>
+    </div>
+    <div class="one">课程内容</div>
+    <div class="two">学习计划内容</div>
+    <div class="three">技能图谱内容</div>
+  </div>
+</body>
+</html>
