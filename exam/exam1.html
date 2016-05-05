@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>One</title>
+	<style type="text/css">
+		.news_img{
+			float:left;
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			margin-right: 15px;
+		}
+		.news_img::after{
+			content: '';
+			display: block;
+			height: 0px;
+			overflow: hidden;
+			visibility: hidden;
+			clear:left;
+		}
+		.words{
+			font:14px/25px  SimSun;
+		}
+		.title{
+			font-size: 16px;
+			font-weight: bold; 
+			color:#000;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow:ellipsis;
+		}
+		.content{
+			overflow: hidden;
+			height: 75px;
+		}
+		.content p{
+			margin:0px;
+			color:#666;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="news_img">
+			<img src="http://163.com/x.jpg">
+		</div>
+		<div class="words">
+			<div class="title" title="标题文字标题文字标题文字标题文字">标题文字标题文字标题文字标题文字</div>
+			<div class="content"><p>段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字</p></div>
+		</div>
+	</div>
+</body>
+</html>
