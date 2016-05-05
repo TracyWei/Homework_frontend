@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+	<style type="text/css">
+		form{
+			font: 12px SimSun;
+		}
+		.title{
+			font: 14px/16px "microsoft yahei";
+			font-weight: bold;
+			margin-bottom: 15px;
+		}
+		.login_label{
+			display: inline-block;
+			width: 60px;
+		}
+		.login_input{
+			width: 200px;
+			height: 20px;
+			border: 1px solid #ddd;
+			margin-bottom: 15px;
+		}
+		.login_button{
+			width: 40px;
+			height: 20px;
+			border: none;
+			background-color: blue;
+			color: #fff;
+			line-height: 20px;
+			text-align: center;
+			font-family: SimSun;
+		}
+	</style>
+</head>
+<body>
+	<div class="title">
+		登录网易通行证
+	</div>
+	<form action="/login" method="post">
+		<div class="line_username">
+			<label class="login_label" for="username">用户名：</label>
+			<input id="username" class="login_input" name="username">
+		</div>
+		<div class="line_password">
+			<label class="login_label" for="password">密码：</label>
+			<input id="password" class="login_input" type="password" name="password">
+		</div>
+		<label class="login_label"></label>
+		<button class="login_button" type="submit">登录</button>
+	</form>
+</body>
+</html>
