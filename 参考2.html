@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="practice.css">
+ 
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="continer">
+    <div class="nav">
+        <ul>
+            <li class="kc selected"><a href="#">课程</a></li>
+            <li class="xxjh"><a href="#">学习计划</a></li>
+            <li class="jntp"><a href="#">技能图谱</a></li>
+        </ul>
+    </div>
+    <div class="xx1">课程内容</div>
+    <div class="xx2">学习计划内容</div>
+    <div class="xx3">技能图谱内容</div>
+</div>
+</body>
+</html>
+*{margin:0;padding:0;}
+   
+.continer{
+    width: 572px;
+    height: 200px;
+    margin: 20px auto;
+    border: 1px solid #999;
+    font: 14px "Microsoft yahei";
+}
+   
+.nav li{
+    float: left;
+    list-style: none;
+    width: 190px;height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #cecece;
+}
+li a{
+    text-decoration: none;
+    display: block;
+    width: 190px;height: 24px;
+    color: #000;
+}
+li.kc,li.xxjh{
+    border-right: 1px solid #cecece;
+}
+   
+li.selected{
+    background-color: #fff;
+    border-bottom-style: none;
+}
+   
+ul:after{
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+ul{zoom: 1;}
+   
+.xx1{
+    display: block;
+    width: 572px;height: 169px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.xx2,.xx2{
+    display: none;
+    width: 572px;height: 169px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+}

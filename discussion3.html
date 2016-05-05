@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实现一个弹窗</title>
+    <style type="text/css">
+        body{
+            font:14px "microsoft yahei";
+        }
+        .alert{
+            z-index: 999;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            position: fixed;
+            top:50%;
+            left: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+        }
+        .title{
+            height: 40px;
+            padding: 0px 20px;
+            line-height: 40px;
+            background-color: #eee;
+          /*  display: flex;
+            justify-content:space-between;*/
+        }
+        .title span{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow:ellipsis;
+            display: inline-block;
+            width: 60%;
+        }
+        .close_img{
+            cursor: pointer;
+            float:right;
+        }
+        .content p{
+            margin:20px;
+            line-height: 1.5;
+            font-size: 12px;
+        }
+        .button{
+            width: 80px;
+            height: 30px;
+            text-align: center;
+            color: #fff;
+            background-color: blue;
+            border-radius: 5px;
+            margin: 20px auto;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="body">This is body</div>
+    <div class="alert">
+        <div class="title">
+            <span>标题aaaaaaaaaaaaaaaaaaaaaaaaaaaa</span>
+            <img class="close_img" src="../x.png">
+        </div>
+        <div class="content">
+            <p>内容区片段</p>
+            <div class="button">确定</div>
+        </div>
+    </div>
+</body>
+</html>
