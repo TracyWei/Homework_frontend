@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Homework3</title>
+	<style type="text/css">
+		.slide{
+			width: 200px;
+			height: 100px;
+			position: relative;
+			background-color: blue;
+		}
+		.pointer{
+			position: absolute;
+			right: 10px;
+			bottom: 10px;
+		}
+		i{
+			content: '';
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: #000;
+			display: inline-block;
+			margin-left: 5px;
+		}
+		i:first-child{
+			margin-left: 0px;
+		}
+		.current{
+			background-color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="slide">
+	<!-- 图片省略 -->
+	<!-- 以下是指示器 -->
+		<div class="pointer">
+			<i class="current"></i>
+			<i></i>
+			<i></i>
+		</div>
+	</div>
+</body>
+</html>
