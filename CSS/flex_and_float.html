@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- 用float -->
+<!-- 	<style type="text/css">
+		.side{
+			width: 200px;
+			height: 500px;
+			background-color: red;
+			float:left;
+		}
+		.main{
+			height: 500px;
+			background-color: blue;
+			/*float: left;*/
+			margin-left: 200px;
+		}
+		.container::after{
+			clear: both;
+			height: 0;
+			overflow: hidden;
+		}
+	</style> -->
+	<style type="text/css">
+		.container{
+			display: flex;
+			flex:1;
+		}
+		.side{
+			width: 200px;
+			background-color: red;
+		}
+		.main{
+			flex:1;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="side"></div>
+		<div class="main">111</div>
+	</div>
+</body>
+</html>
