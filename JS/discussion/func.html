@@ -20,5 +20,89 @@
 		console.log("three"+(i+100));
 	}
 	add1(1);
+	
+// 思考题：对象方法中定义的子函数，子函数执行时this指向哪里？老师参与
+// 三个问题：
+// 以下代码中打印的this是个什么对象？
+// 这段代码能否实现使myNumber.value加1的功能？
+// 在不放弃helper函数的前提下，有哪些修改方法可以实现正确的功能？
+	//错误的this指向
+	var myNumber={
+		value:1,
+		add:function(i){
+			var helper=function(i){
+				console.log("jjj");
+				this.value+=i;
+			}
+			helper(i);
+		}
+	}
+	myNumber.add(1);
+	console.log(myNumber.value);
+	//改变helper函数中的this指向
+	//方法1
+	 var myNumber={
+		value:1,
+		add:function(i){
+			var helper=function(i){
+				this.value+=i;
+			}
+			helper.call(myNumber,i);
+		}
+	}
+	myNumber.add(1);
+	console.log(myNumber.value);
+	//方法2
+	var myNumber={
+		value:1,
+		add:function(i){
+			var helper=function(i){
+				this.value+=i;
+			}
+			helper.apply(myNumber,[i]);
+		}
+	}
+	myNumber.add(1);
+	console.log(myNumber.value);
+	//方法3
+	var myNumber={
+		value:1,
+		add:function(i){
+			var helper=function(i){
+				this.value+=i;
+			}
+			helper.bind(this,i)();
+		}
+	}
+	myNumber.add(1);
+	console.log(myNumber.value);
+	//直接带入myNumber中的value值
+	//方法1
+	var myNumber={
+		value:1,
+		add:function(i){
+			var self=this;
+			var helper=function(i){
+				console.log(self);
+				self.value+=i;
+			}
+			helper(i);
+		}
+	}
+	myNumber.add(1);
+	console.log(myNumber.value);
+	//方法2
+	var myNumber={
+		value:1,
+		add:function(i){
+			var helper=function(i){
+				console.log(self);
+				myNumber.value+=i;
+			}
+			helper(i);
+		}
+	}
+	myNumber.add(1);
+	console.log(myNumber.value);
 </script>
 </html>
