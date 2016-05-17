@@ -20,7 +20,7 @@
 		console.log("three"+(i+100));
 	}
 	add1(1);
-	
+
 // 思考题：对象方法中定义的子函数，子函数执行时this指向哪里？老师参与
 // 三个问题：
 // 以下代码中打印的this是个什么对象？
@@ -59,11 +59,11 @@
 			var helper=function(i){
 				this.value+=i;
 			}
-			helper.apply(myNumber,[i]);
+			helper.apply(this,[i]);
 		}
 	}
 	myNumber.add(1);
-	console.log(myNumber.value);
+	console.log(this.value);
 	//方法3
 	var myNumber={
 		value:1,
@@ -71,11 +71,11 @@
 			var helper=function(i){
 				this.value+=i;
 			}
-			helper.bind(this,i)();
+			helper.bind(myNumber,i)();
 		}
 	}
 	myNumber.add(1);
-	console.log(myNumber.value);
+	console.log(this.value);
 	//直接带入myNumber中的value值
 	//方法1
 	var myNumber={
