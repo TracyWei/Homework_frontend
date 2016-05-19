@@ -6,10 +6,10 @@
 //     var a = Object.create({x: 1, y: 2});
 //     alert(a.x);
 // Object.create在某些浏览器没有支持，请给出Object.create的兼容实现。
-if(typeof Object.create!='function'){
+if(!Object.create){
 	Object.create=function(obj){
-		if(typeof obj!='object'){
-			throw TypeError('Object prototype may only be null or an Object!');
+		if(typeof obj!=='object'){
+			throw new TypeError('Object prototype may only be an Object or null!');
 		}
 		var P = function(){};
 		p.prototype = obj;
