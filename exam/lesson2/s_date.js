@@ -20,16 +20,16 @@ function formateDate(data,pattern){
 	var result;
 	switch(pattern){
 		case "yyyy":
-     		ret = d.year;
+     		result = d.year;
       		break;
     	case "yyyy-MM-dd":
-      		ret = d.year+'-'+d.month+'-'+d.day;
+      		result = d.year+'-'+d.month+'-'+d.day;
       		break;
     	case "yyyy-MM-dd HH":
-      		ret = d.year+'-'+d.month+'-'+d.day+' '+d.hours;
+      		result = d.year+'-'+d.month+'-'+d.day+' '+d.hours;
       		break;
     	case "yyyy-MM-dd HH:mm:ss":
-      		ret = d.year+'-'+d.month+'-'+d.day+' '+d.hours+':'+d.minutes+':'+d.seconds;
+      		result = d.year+'-'+d.month+'-'+d.day+' '+d.hours+':'+d.minutes+':'+d.seconds;
       		break;
    		default:
       		break;
@@ -37,4 +37,4 @@ function formateDate(data,pattern){
 	return result;
 }
 var date = new Date(2001, 8, 11, 8, 26, 8);
-formatDate(date, "yyyy");	
+formateDate(date, "yyyy-MM-dd HH:mm:ss");	
