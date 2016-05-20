@@ -8,13 +8,12 @@
 function search(arr,dst){
     var type = Object.prototype.toString.call(arr).slice(8,-1);
     if(type != 'Array'){
-        throw TypeError('Object prototype may only be an Array!')
+        throw TypeError('Object prototype may only be an Array!');
     }
     var len = arr.length;
     if( !len){
         return -1;
     }
-
     var l = 0;
     var h = len - 1;
     while(l <= h){
