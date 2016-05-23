@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Element.dataset兼容IE6、7</title>
+	<style>
+		li{cursor: default;line-height: 1.8;}
+		table{border-collapse: collapse;}
+		th, td, caption{padding: 10px;border: 1px solid #ddd;font-size: 14px;}
+		th{color: #999;}
+		caption{font-size: 20px;font-weight: bold;border-bottom: none;}
+		#card{position: absolute;top: 10px;left: 150px;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li data-id="123456" data-account-name="wwq"
+			data-name="魏文庆" data-email="wwq123@163.com" 
+			data-mobile="13524543878" name="hh">wwq</li>
+		<li data-id="123457" data-account-name="cjf"
+			data-name="蔡剑飞" data-email="cjf123@163.com" 
+			data-mobile="13968789868">cjf</li>
+	</ul>
+	<div id="card" style="display:none">
+		<table>
+			<caption id="accountName"></caption>
+			<tr><th>姓名：</th><td id="name"></td></tr>
+			<tr><th>邮箱：</th><td id="email"></td></tr>
+			<tr><th>手机：</th><td id="mobile"></td></tr>
+		</table>
+	</div>
+	<script type="text/javascript">
+// 		function getdataset(element) {
+//     if (element.dataset) {
+//         return element.dataset;
+//     } else {
+//         var result = {};
+//         var atts = element.attributes;
+//         var len = atts.length;
+//         var name;
+//         var key;
+//         for (var i = 0; i < len; i++) {
+//             name = atts[i].name;
+//             if (name.indexOf("data-") != -1) {
+//                 key = name.substring(5);
+//                 key = key.replace(/-\w/g, function(match) {
+//                     return match.substring(1).toUpperCase()+'';
+//                 });
+//             }
+//             result[key] = atts[i].value;
+//         }
+//         return result;
+//     }
+// }
+function myDataset(element){
+			if(element.dataset){
+				return element.dataset
+			}
+			else{
+				var result = {};
+				var attr = element.attributes;
+				console.log("attr:");
+				console.log(attr);
+				var len = attr.length;
+				console.log(len);
+				var attrName,key;
+				// for(var i in attr){
+				// 	console.log("in attr:");
+				// 	console.log(attr[i]);
+				// }
+				for(var i = 0;i < len;i++){
+					console.log(i);
+					console.log(attr[i]);
+					attrName = attr[i].name;
+					if(attrName.indexOf("data-") != -1){
+						key = attrName.substring(5);
+						result[key] = attr[i].value+'ha';
+					}
+				}
+				return result;
+			}
+		}
+		var lis = document.getElementsByTagName('li');
+		console.log(myDataset(lis[0]));
+	</script>
+</body>
+</html>
