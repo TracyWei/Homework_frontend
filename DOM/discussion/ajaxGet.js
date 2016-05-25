@@ -11,7 +11,7 @@ function serialize(data){
 			continue;
 		var value = data[name].toString();
 		name = encodeURIComponent(name);
-		key = encodeURIComponent(key);
+		value = encodeURIComponent(value);
 		pairs.push(name + '=' + value);
 	}
 	return pairs.join('&');
@@ -19,7 +19,7 @@ function serialize(data){
 function getAjax(url,options,callback){
 	var xhr = new XMLHttpRequest();
 	xhr.onreadystatechange = function(callback){
-		if(xhr.readyState ==4){
+		if(xhr.readyState == 4){
 			if((xhr.status >= 200 && xhr.status < 300)||xhr.status ==304){
 				//status200-300表示成功，304表示读取缓存
 				callback(xhr.responseText);
