@@ -1,0 +1,62 @@
+<!-- 函数fadeout(element)实现了元素的淡出效果（即透明度从1变到0），动画时间为1秒钟。用定时器setInterval实现动画，写出函数fadeout的实现代码 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>fadeout函数</title>
+	<style type="text/css">
+		#container{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 300px;
+			height: 300px;
+			margin-left: -150px;
+			margin-top: -150px;
+			font-family: "microsoft yahei";
+		}
+		.box{
+			background-color:#FFCCCC;
+			padding: 20px;
+			/*opacity:0.8;*/
+			/*filter:alpha(opacity=80);*/
+		}
+		#container button{
+			display: block;
+			margin: 10px auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="box" id="fadeoutDiv">
+			<p>函数fadeout(element)实现了元素的淡出效果（即透明度从1变到0），动画时间为1秒钟。</p>
+		</div>
+		<button id="btn">点击淡出</button>
+	</div>
+	<script type="text/javascript">
+		window.onload=function(){
+			function fadeout(element){
+				var val = 1;
+				var timer;
+				timer = setInterval(function(){
+					setOpacity(element,val);
+					val-=0.1;
+					if(val<0){
+						clearInterval(timer);
+					}
+				},100);
+				function setOpacity(element,val){
+					 element.filters ? element.style.filter ='alpha(opacity='+100*val+')' : element.style.opacity =val;
+				}
+			}
+			var btn = document.getElementById('btn');
+			var fadeoutDiv = document.getElementById('fadeoutDiv');
+			btn.onclick = function(){
+				fadeout(fadeoutDiv);
+				console.log("click");
+			}
+		}
+	</script>
+</body>
+</html>
