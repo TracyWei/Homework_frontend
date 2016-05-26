@@ -12,7 +12,7 @@
 		            classNameStr = ' ' + element.className + ' ';
 		            flag = true;
 		            for (var j = 0, name; name = names[j]; j++) {
-		                if (classNameStr.indexOf(' ' + name + '') == -1) {
+		                if (classNameStr.indexOf(' ' + name + '  ') == -1) {
 		                    flag = false;
 		                    break;
 		                }
