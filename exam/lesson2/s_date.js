@@ -15,7 +15,7 @@ function formateDate(data,pattern){
 		day:date.getDate() < 10 ? '0'+date.getDate() : date.getDate(),
 		hours:date.getHours() < 10 ? '0'+date.getHours() : date.getHours(),
 		minutes:date.getMinutes() < 10 ? '0'+date.getMinutes():date.getMinutes(),
-    	seconds:date.getSeconds() < 10 ? '0'+date.getSeconds():date.getSeconds()
+    seconds:date.getSeconds() < 10 ? '0'+date.getSeconds():date.getSeconds()
 	};
 	var result;
 	switch(pattern){

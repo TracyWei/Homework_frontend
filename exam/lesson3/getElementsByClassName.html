@@ -50,6 +50,55 @@ getElementsByClassName(example, “ccc bbb”);运行结果为包含id为p3的�
 				return result;
 			}
 		}
+		//另一种写法
+		 // function getElementsByClassName(element, names)
+   // {
+   //    //elements即为此例中所有p元素的集合
+   //    var elements = element.children;
+ 
+   //    //判断若浏览器支持getElementsByClassName方法，则直接返回结果
+   //    if (document.getElementsByClassName) 
+   //    {
+   //      return element.getElementsByClassName(names);
+   //    }
+ 
+   //    //兼容代码
+   //    else
+   //    {
+   //      //result存放最终结果，k用作result的下标，每当添加对象进result时，k++
+   //      var result = new Object();
+   //      var k = 0;
+ 
+   //      //两层循环，外层遍历三个子元素。内层判断是否具有对应class名称，classes是class名称的集合
+   //      for(var i=0;i<elements.length;i++)
+   //      {
+   //        var classes = names.split(" "); 
+   //        for(var j=0;j<classes.length;j++)
+   //        {
+   //          //一个一个比较，如果传入"aaa"，则此处只比较一次，若传入"aaa bbb"则比较两次
+   //          if (hasClass(elements[i],classes[j]))
+   //          {
+   //            result[k] = elements[i];
+   //            k++;
+   //          };
+   //        }
+   //      }
+   //      return result;
+   //    }
+ 
+   //    //判断是否具有class名称，这里的name是单个class名，classes则是class名称的集合
+   //    function hasClass(element,name)
+   //    {
+   //      var classNames = element.getAttribute("class").split(" ");
+   //      for(var i=0;i<classNames.length;i++)
+   //      {
+   //        if(classNames[i] == name)
+   //          {
+   //            return true;
+   //          }
+   //      }
+   //    }
+   // }
 		var example = document.getElementById('example');
 		console.log(getElementsByClassName(example, "aaa"));
 		console.log(getElementsByClassName(example, "bbb ccc"));
