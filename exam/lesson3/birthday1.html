@@ -89,11 +89,11 @@
                         return;
                     }
                     var year = myYear.options[myYear.selectedIndex].value;
-                    console.log(year);
+                    // console.log(year);
                     if( year == 0 )
                         return;
                     var month = myMonth.options[myMonth.selectedIndex].value;
-                    console.log(month);
+                    // console.log(month);
                     if( month == 0 )
                         return;
                     var date = getDays(year,month);
@@ -109,11 +109,15 @@
             addEvent(myYear,'change',function(){
                 for(var i = 0; i <= 3; i++){
                     addDays(this,i);
+                    console.log("thisyear");
+                    console.log(this);
                 }
             });
             addEvent(myMonth,'change',function(){
                 for(var i = 0; i <= 12; i++){
                     addDays(this,i);
+                    console.log("thismonth");
+                    console.log(this);
                 }
             })
         });
