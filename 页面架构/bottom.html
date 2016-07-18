@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bottom Display</title>
+	<style type="text/css">
+		.container{
+			margin-top: 200px;
+			display: flex;
+			align-items:flex-end;
+		}
+		.common:nth-child(even){
+			height: 400px;
+			background-color: green;
+		}
+		.common:nth-child(odd){
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="common">
+			a
+		</div>
+		<div class="common">
+			b
+		</div>
+		<div class="common">
+			c
+		</div>
+		<div class="common">
+			d
+		</div>
+	</div>
+</body>
+</html>
