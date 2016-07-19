@@ -1,0 +1,35 @@
+<!-- 一个未知宽高的容器，要被均分为四个相同大小格子（即四个容器），且格子间有10px间距（即十字型空隙 -->
+方法1:float+background-clip：content-box
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>全等四宫格</title>
+	<style type="text/css">
+		.parent{
+			height: 400px;
+			width: 400px;
+			margin-left: -10px;
+			margin-bottom: -10px;
+		}
+		.box{
+			box-sizing:border-box;
+			padding-left: 10px;
+			padding-bottom: 10px;
+			background-color: blue;
+			float: left;
+			width: 50%;
+			height: 50%;
+			background-clip: content-box;
+		}
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</div>
+</body>
+</html>
