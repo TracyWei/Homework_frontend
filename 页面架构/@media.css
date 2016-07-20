@@ -1,0 +1,7 @@
+/*当我们把一个图标做成CSS中的背景图，在视网膜屏上预览时会发现图标是模糊的，所以我们会同时准备一个2倍大小的图标给高清屏，那么问题来了，怎么实现在普通屏下是普通背景图，而在高清屏下是用的高清图呢？*/
+.pic{
+	background: url(pic1.jpg);
+}
+@media screen and(-webkit-min-device-pixel-ratio:1.5){
+	background: url(pic1.jpg);
+}
