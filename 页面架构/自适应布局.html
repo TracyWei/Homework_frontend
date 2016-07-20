@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自适应布局</title>
+	<style type="text/css">
+		.parent{
+			width: 960px;
+			background:#444;
+			margin:0 auto;
+		}
+		.side{
+			background: #00B5B5;
+			width: 300px;
+			float:left;
+			margin-right: 10px;
+			height: 200px;
+		}
+		.main{
+			background: #FF0086;
+			overflow: hidden;
+			height: 200px;
+		}
+		@media screen and (max-width: 1000px){
+			.parent{
+				width: 100%;
+			}
+		}
+		@media screen and (max-width: 400px){
+			.parent,.side,.main{
+				width: 100%;
+			}
+			.side{
+				float:none;
+				margin-right: 0;
+				margin-bottom: 10px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<div class="side"></div>
+    	<div class="main"></div>
+	</div>
+</body>
+</html>
